@@ -3,16 +3,16 @@
 This is a feature-rich weather dashboard application built with React. It allows users to search for current weather information by city name, see a 5-day forecast, and even get weather data based on their location.
 
 ## Features
-	•	Search Weather by City: Easily search for current weather and a 5-day forecast for any city.
-	•	Location-based Weather: Option to get weather details based on the user’s current location.
-	•	Responsive Design: Optimized for both desktop and mobile views for a seamless experience.
-	•	Detailed Weather Info: Displays temperature, humidity, wind speed, and weather conditions.
-	•	5-Day Forecast: View the forecast for the next five days, including temperature highs/lows and weather icons.
-	•	Error Handling: Shows helpful error messages for invalid city names or issues fetching data.
-	•	Lazy Loading: Components are lazy-loaded to improve performance.
-	•	Offline Cache: Stores the last searched city and its weather data for offline viewing.
-	•	Query Parameter Updates: Automatically updates the URL with search queries, making sharing easy.
-	•	Unit Conversion: Easily switch between Celsius and Fahrenheit for temperature display.
+- **Search Weather by City**: Easily search for current weather and a 5-day forecast for any city.
+- **Location-based Weather**: Option to get weather details based on the user’s current location.
+- **Responsive Design**: Optimized for both desktop and mobile views for a seamless experience.
+- **Detailed Weather Info**: Displays temperature, humidity, wind speed, and weather conditions.
+- **5-Day Forecast**: View the forecast for the next five days, including temperature highs/lows and weather icons.
+- **Error Handling**: Shows helpful error messages for invalid city names or issues fetching data.
+- **Lazy Loading**: Components are lazy-loaded to improve performance.
+- **Offline Cache**: Stores the last searched city and its weather data for offline viewing.
+- **Query Parameter Updates**: Automatically updates the URL with search queries, making sharing easy.
+- **Unit Conversion**: Easily switch between Celsius and Fahrenheit for temperature display.
 
 ## Installation
 
