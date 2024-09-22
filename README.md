@@ -60,5 +60,6 @@ To run this application locally, follow these steps:
 - **Location-based Weather**: Integrated location permission to fetch weather data for the user’s current location.
 - **Query Parameters**: Automatically update the URL with query parameters to share searches via links.
 <hr/>
+
 ## Contributing
 Feel free to contribute to this project by submitting bug reports, feature requests, or pull requests. Contributions are welcome and appreciated! If you have any questions or feedback, please don’t hesitate to contact me.
