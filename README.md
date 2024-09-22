@@ -45,20 +45,20 @@ Usage
   7.	Celsius/Fahrenheit Toggle: Switch between Celsius and Fahrenheit temperature units.
 
 Technologies Used
-  •	React for building the user interface.
-  •	Redux for global state management (weather data, city suggestions, and favorites).
-  •	Tailwind CSS for responsive design and styling.
-  •	Axios for making API requests.
-  •	Vite for fast development bundling.
-  •	OpenWeatherMap API for fetching weather data.
-  •	Browser Geolocation API for getting the user’s current location.
-  •	LocalStorage for caching data to enable offline viewing.
+	  •	React for building the user interface.
+	  •	Redux for global state management (weather data, city suggestions, and favorites).
+	  •	Tailwind CSS for responsive design and styling.
+	  •	Axios for making API requests.
+	  •	Vite for fast development bundling.
+	  •	OpenWeatherMap API for fetching weather data.
+	  •	Browser Geolocation API for getting the user’s current location.
+	  •	LocalStorage for caching data to enable offline viewing.
 
 Updates and Enhancements
-  •	Performance Optimizations: Implemented lazy loading for components to improve performance.
-  •	Offline Mode: Cached last searched city data for offline access.
-  •	Location-based Weather: Integrated location permission to fetch weather data for the user’s current location.
-  •	Query Parameters: Automatically update the URL with query parameters to share searches via links.
+	  •	Performance Optimizations: Implemented lazy loading for components to improve performance.
+	  •	Offline Mode: Cached last searched city data for offline access.
+	  •	Location-based Weather: Integrated location permission to fetch weather data for the user’s current location.
+	  •	Query Parameters: Automatically update the URL with query parameters to share searches via links.
 <hr/>
 Contributing
 
