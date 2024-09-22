@@ -36,7 +36,7 @@ To run this application locally, follow these steps:
 6. Open your web browser and go to http://localhost:5173 to view the app.
 7. You can also interact with the app deployed on GitHub Pages: https://deepcodetech.github.io/Weather-App. 
 
-Usage
+## Usage
   1.	Search: Enter the name of the city for which you want to see the weather information in the input field.
   2.	Current Weather: View the current weather details including temperature, humidity, and wind speed.
   3.	5-Day Forecast: See a detailed 5-day forecast with high/low temperatures and weather icons.
