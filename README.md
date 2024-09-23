@@ -6,7 +6,6 @@ This is a feature-rich weather dashboard application built with React. It allows
 
 -	Search Weather by City: Easily search for current weather and a 5-day forecast for any city.
 -	Location-based Weather: Option to get weather details based on the user’s current location.
--	Favorites List: Save your favorite cities for quick weather updates.
 -	Responsive Design: Optimized for both desktop and mobile views for a seamless experience.
 -	Detailed Weather Info: Displays temperature, humidity, wind speed, and weather conditions.
 -	5-Day Forecast: View the forecast for the next five days, including temperature highs/lows and weather icons.
@@ -41,7 +40,6 @@ To run this application locally, follow these steps:
 1.	Search: Enter the name of the city for which you want to see the weather information in the input field.
 2.	Current Weather: View the current weather details including temperature, humidity, and wind speed.
 3.	5-Day Forecast: See a detailed 5-day forecast with high/low temperatures and weather icons.
-4.	Favorites: Add cities to your favorites list for quick access.
 5.	Location-based Weather: Allow the app to access your location to automatically fetch weather data for your town or city.
 6.	Responsive Design: The app adapts to mobile, tablet, and desktop screens.
 7.	Celsius/Fahrenheit Toggle: Switch between Celsius and Fahrenheit temperature units.
