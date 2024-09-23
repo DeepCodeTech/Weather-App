@@ -21,32 +21,46 @@ To run this application locally, follow these steps:
 
 1. Clone this repository to your local machine using `git clone`.
    ```bash
-   git clone https://github.com/DeepCodeTech/React-Weather-Dashboard.git
+   git clone https://github.com/DeepCodeTech/Weather-App.git
 2. Navigate to the project directory.
    ```bash
-   cd react-weather-app
-2. Navigate to the project directory.
-   ```bash
-   cd react-weather-app
+   cd weather-app
 3. Install dependencies using npm or yarn.
    ```bash
    npm install
-4. Start the development server.
+5. Create a .env.development file in the root of the project with the following environment variable for the OpenWeatherMap API key:
    ```bash
-   npm start
-5. Open your web browser and go to http://localhost:3000 to view the app.
-6. You can also interact with the app deployed on github pages : https://deepcodetech.github.io/React-Weather-Dashboard.
+   VITE_WEATHER_APP_API_KEY="f788e4671071ee45d3255bd32a5b0bb4"
+6. Start the development server.
+   ```bash
+   npm run dev
+7. Open your web browser and go to http://localhost:5173 to view the app.
+8. You can also interact with the app deployed on github pages : https://deepcodetech.github.io/Weather-App.
 
-Usage
- 1. Enter the name of the city for which you want to see the weather information in the input field.
- 2. Press the "Search" button or hit Enter to fetch the weather data for the specified city.
- 3. The current weather details, including temperature, humidity, and wind speed, will be displayed.
- 4. For mobile users, the app is designed to be responsive and provide a seamless experience.
+## Usage
+1.	Search: Enter the name of the city for which you want to see the weather information in the input field.
+2.	Current Weather: View the current weather details including temperature, humidity, and wind speed.
+3.	5-Day Forecast: See a detailed 5-day forecast with high/low temperatures and weather icons.
+4.	Favorites: Add cities to your favorites list for quick access.
+5.	Location-based Weather: Allow the app to access your location to automatically fetch weather data for your town or city.
+6.	Responsive Design: The app adapts to mobile, tablet, and desktop screens.
+7.	Celsius/Fahrenheit Toggle: Switch between Celsius and Fahrenheit temperature units.
 
-Technologies Used
- - React
- - Redux (for state management)
- - Material-UI (for UI components)
- - OpenWeatherMap API and Accuweather API (for weather data)
-<hr/>
-Feel free to contribute to this project by submitting bug reports, feature requests, or pull requests. If you have any questions or feedback, please don't hesitate to contact me. Thank you for using the React Weather App!
+## Technologies Used
+- **React** for building the user interface.
+- **Redux** for global state management (weather data, city suggestions, and favorites).
+- **Tailwind CSS** for responsive design and styling.
+- **Axios** for making API requests.
+- **Vite** for fast development bundling.
+- **OpenWeatherMap API** for fetching weather data.
+- **Browser Geolocation API** for getting the user’s current location.
+- **LocalStorage** for caching data to enable offline viewing.
+
+## Updates and Enhancements
+- **Performance Optimizations**: Implemented lazy loading for components to improve performance.
+- **Offline Mode**: Cached last searched city data for offline access.
+- **Location-based Weather**: Integrated location permission to fetch weather data for the user’s current location.
+- **Query Parameters**: Automatically update the URL with query parameters to share searches via links.
+
+## Contributing
+Feel free to contribute to this project by submitting bug reports, feature requests, or pull requests. Contributions are welcome and appreciated! If you have any questions or feedback, please don’t hesitate to contact me.
