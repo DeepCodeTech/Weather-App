@@ -1,12 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
-import PullToRefresh from "react-pull-to-refresh";
+// import PullToRefresh from "react-pull-to-refresh";
 import SearchCity from "./components/searchCity";
 import CityDisplay from "./components/CityDisplay";
 import TemperatureDisplay from "./components/TemperatureDisplay";
 import WeatherConditionDisplay from "./components/WeatherConditionDisplay";
 import WeatherIcon from "./components/WeatherIcon";
 import Popup from "./components/Popup";
-import ForecastCard from "./components/ForecastCard";
+// import ForecastCard from "./components/ForecastCard";
 import {
   fetchWeatherData,
   fetchFiveDayForecast,
@@ -108,14 +108,6 @@ const App = () => {
     } else fetchWeatherByLocation();
   }, []);
 
-  const refreshData = async () => {
-    const params = getQueryParams();
-    const city = params.get("city");
-    if (city) {
-      await handleCitySelect(city);
-    }
-  };
-
   const getDailyForecast = (list) => {
     const dailyForecast = [];
     const seenDates = new Set();
@@ -160,37 +152,35 @@ const App = () => {
   };
 
   return (
-    <PullToRefresh onRefresh={refreshData}>
-      <div className="min-h-screen flex flex-col justify-center items-center bg-blue-100 p-4">
-        <h1 className="text-3xl mb-10">Weather App Dashboard</h1>
-        {popupVisible && <Popup message={error} onClose={handleClosePopup} />}
-        <SearchCity onSelectCity={handleCitySelect} />
-        <ToggleUnits {...{ handleResetCachedData, unit, toggleUnit }} />
-        {loading ? (
-          <div className="loader"></div>
-        ) : weatherData ? (
-          <div className="mt-6 mb-10 bg-white shadow-lg rounded-lg p-6 w-full max-w-lg text-center">
-            <CityDisplay city={weatherData.name} />
-            <TemperatureDisplay
-              temperature={convertTemperature(weatherData.main.temp)}
-              unit={unit}
-            />
-            <WeatherConditionDisplay
-              condition={weatherData.weather[0].description}
-            />
-            <WeatherIcon
-              iconUrl={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}
-            />
-            <ForecastingDataMapper
-              {...{ forecastData, convertTemperature, unit }}
-            />
-          </div>
-        ) : (
-          <p className="m-auto">Select a city</p>
-        )}
-        <Footer />
-      </div>
-    </PullToRefresh>
+    <div className="min-h-screen flex flex-col justify-center items-center bg-blue-100 p-4">
+      <h1 className="text-3xl mb-10">Weather App Dashboard</h1>
+      {popupVisible && <Popup message={error} onClose={handleClosePopup} />}
+      <SearchCity onSelectCity={handleCitySelect} />
+      <ToggleUnits {...{ handleResetCachedData, unit, toggleUnit }} />
+      {loading ? (
+        <div className="loader"></div>
+      ) : weatherData ? (
+        <div className="mt-6 mb-10 rounded-xl bg-white shadow-[0px_4px_24px_rgba(0,0,0,0.20)] p-6 w-full max-w-[80%] text-center">
+          <CityDisplay city={weatherData.name} />
+          <TemperatureDisplay
+            temperature={convertTemperature(weatherData.main.temp)}
+            unit={unit}
+          />
+          <WeatherConditionDisplay
+            condition={weatherData.weather[0].description}
+          />
+          <WeatherIcon
+            iconUrl={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}
+          />
+          <ForecastingDataMapper
+            {...{ forecastData, convertTemperature, unit }}
+          />
+        </div>
+      ) : (
+        <p className="m-auto">Select a city</p>
+      )}
+      <Footer />
+    </div>
   );
 };
 
