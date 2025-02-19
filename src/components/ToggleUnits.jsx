@@ -2,7 +2,6 @@ const ToggleUnits = ({ handleResetCachedData, unit, toggleUnit }) => {
   return (
     <>
       <div className="mt-4 flex items-center">
-        <span className="mr-2 text-lg">{unit}</span>
         <label className="relative inline-flex items-center cursor-pointer">
           <input
             type="checkbox"
@@ -10,17 +9,31 @@ const ToggleUnits = ({ handleResetCachedData, unit, toggleUnit }) => {
             checked={unit === "Fahrenheit"}
             onChange={toggleUnit}
           />
-          <div className="toggle__line w-14 h-8 bg-gray-300 rounded-full"></div>
-          <div
-            className="toggle__dot absolute w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300 ease-in-out transform"
-            style={{
-              transform:
-                unit === "Fahrenheit" ? "translateX(100%)" : "translateX(0)",
-            }}
-          ></div>
+          {/* Toggle Track */}
+          <div className="relative w-32 h-8 bg-gray-300 rounded-full transition duration-300 flex items-center px-1">
+            {/* Toggle Dot with Dynamic Text */}
+            <div
+              className={`absolute flex bg-blue-500 items-center justify-center text-xs font-bold text-white w-8 h-6 rounded-full shadow-md transition-transform duration-300 ease-in-out ${
+                unit === "Fahrenheit" ? "translate-x-[88px]" : "translate-x-0"
+              }`}
+            >
+              {unit === "Fahrenheit" ? "°F" : "°C"}
+            </div>
+
+            {/* Dynamic Label: Display text on opposite side of thumb */}
+            <span
+              className={`absolute text-xs font-bold transition-opacity ${
+                unit === "Fahrenheit"
+                  ? "left-2 text-gray-800"
+                  : "right-2 text-gray-800"
+              }`}
+            >
+              {unit === "Fahrenheit" ? "Fahrenheit" : "Celsius"}
+            </span>
+          </div>
         </label>
       </div>
-      <button className="underline" onClick={handleResetCachedData}>
+      <button className="underline mt-2" onClick={handleResetCachedData}>
         Reset data
       </button>
     </>

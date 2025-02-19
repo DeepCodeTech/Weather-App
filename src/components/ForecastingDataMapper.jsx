@@ -13,13 +13,15 @@ const ForecastingDataMapper = ({ forecastData, unit, convertTemperature }) => {
         const iconUrl = `http://openweathermap.org/img/wn/${dayData.weather[0].icon}.png`;
 
         return (
-          <ForecastCard
-            key={index}
-            day={day}
-            highTemp={`${highTemp} °${unit === "Celsius" ? "C" : "F"}`}
-            lowTemp={`${lowTemp} °${unit === "Celsius" ? "C" : "F"}`}
-            iconUrl={iconUrl}
-          />
+          <div className="flex justify-center" key={index}>
+            <ForecastCard
+              key={index}
+              day={day}
+              highTemp={`${highTemp} °${unit === "Celsius" ? "C" : "F"}`}
+              lowTemp={`${lowTemp} °${unit === "Celsius" ? "C" : "F"}`}
+              iconUrl={iconUrl}
+            />
+          </div>
         );
       })}
     </div>
